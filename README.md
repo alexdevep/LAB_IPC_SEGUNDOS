@@ -6,3 +6,5 @@ Ejemplo inicial de python, conceptos basicos como: tipos de datos, variables, di
 
 ## SEGUNDO LABORATORIO
 Como utilizar Git, comandos basicos para trabajar en un proyecto.
+
+## TERCER LABORATORIO
