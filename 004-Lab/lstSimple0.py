@@ -11,19 +11,19 @@ class lista_simple:
 
     # Método para agregar elementos en el frente de la lista simple
     def insertar_inicio(self, data):
-        self.root = node(data=data, siguiente=self.root)  
+        self.root = node(data=data, siguiente=self.root)
 
     # Método para agregar elementos al final de la lista simple
     def insertar_fin(self, midato): 
 
         if self.root is None: #Si root es nula. Esto pasa si y si solo es el primer nodo que se esta agregando a la lista
-            self.root = node(data=midato) #Creando mi primer y asignando a root
+            self.root = node(data=midato,siguiente=None) #Creando mi primer y asignando a root
             return #finaliza
         #En caso de que root ya tenga un nodo
         auxRoot = self.root
         while auxRoot.siguiente: #Mientras exista un nodo
             auxRoot = auxRoot.siguiente
-        auxRoot.siguiente = node(data=midato) #mi nuevo nodo
+        auxRoot.siguiente = node(data=midato, siguiente= None) #mi nuevo nodo
     
     # Método para imprimir la lista de nodos
     def imprimir_lista( self ):
@@ -40,7 +40,7 @@ s.insertar_fin(8) # Agregamos un elemento al inicio del nodo
 s.insertar_fin(9) # Agregamos otro elemento al inicio del nodo
 s.imprimir_lista() # Imprimimos la lista de nodos
 
-print("Lista añadiendo al final")
+print("Lista añadiendo al inicio")
 s0 = lista_simple() # Instancia de la clase
 s0.insertar_inicio(5) # Agregamos un elemento al final del nodo
 s0.insertar_inicio(8) # Agregamos un elemento al final del nodo

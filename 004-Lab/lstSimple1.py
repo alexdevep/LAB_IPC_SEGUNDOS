@@ -27,9 +27,10 @@ class lista_simple:
     def eliminar_nodo(self, key):
         aux = self.root
         prev = None
-        while aux and aux.data != key:
+        while aux is None and aux.data != key:
             prev = aux
             aux = aux.siguiente
+            
         if prev is None:
             self.root = aux.siguiente
         elif aux:
