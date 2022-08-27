@@ -17,7 +17,7 @@ class circular_simple(object):
     def agregarInicio(self, data):
         # Agregar un nodo en la cabeza
         node = Node(data)
-        if self.estaVacia():
+        if self.estaVacia(): #La lista circular está inicialmente vacía
             self.head = node
             node.next = self.head
         else:
@@ -35,7 +35,7 @@ class circular_simple(object):
     def agregarFinal(self, data):
         # Agregar un nodo al final
         node = Node(data)
-        if self.estaVacia():
+        if self.estaVacia(): #La lista circular está inicialmente vacía
             self.head = node
             node.next = self.head
         else:
