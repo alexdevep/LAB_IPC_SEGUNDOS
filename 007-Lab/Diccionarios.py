@@ -33,7 +33,9 @@ try:
     print(d.pop("Febrero")) #No existe la clave
 except:
     print("[Error] Ha ocurrido un error")
-
+finally:
+    print("finalito")
+    
 print("---------------- Agrega un nuevo par clave:valor ----------------")
 print(d)
 d.update({"Junio":6})
