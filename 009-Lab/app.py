@@ -32,12 +32,13 @@ def index():
 
 @app.route('/numeros')
 def numeros():
-    num = 100 
-    return render_template("temp.html", num=num)
+    num = -100 
+    nombres = ["Alan", "Jose", "Luis"]
+    return render_template("temp.html", digito=num, nombres=nombres)
 
-@app.route('/<string:nombre>/') #Ser explicitos en tipo de variable
-def saludo(nombre):
-    return render_template("saludo.html", name=nombre) #Revisar sintaxis
+@app.route('/<string:nombre>/<string:apellido>/') #Ser explicitos en tipo de variable
+def saludo(nombre,apellido):
+    return render_template("saludo.html", name=nombre, lastname=apellido) #Revisar sintaxis
 
 
 @app.route('/xml', methods = ['POST'], strict_slashes=False)
@@ -55,7 +56,7 @@ def add_pub():
     nombre = request.json['nombre']
     curso = request.json['curso']
     lista = request.json['lista']
-    nota = request.json['nota']
+    nota = request.json['nota'] #numerico
     print(lista)
     msg = 'Hola mi nombre es ' + nombre +', bienvenido al curso de '+curso
     resultado='Gano el curso'

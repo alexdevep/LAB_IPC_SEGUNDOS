@@ -10,10 +10,16 @@
     <!-- Al inspeccionar sale la ruta del archivo -->
 </head>
 <body>
-    {% if num > 0 %}
-    <h1> Numero es positivo </h1>
+    {% if digito > 0 %}
+        <h1> Numero es positivo </h1>
     {% else %}
-    <h1> Numero es negativo </h1>
+        <h1> digito es negativo </h1>
     {% endif %}
+    <hr>
+    <ul>
+        {% for nombre in nombres %}
+           <li>{{ nombre }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
